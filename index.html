@@ -7,32 +7,49 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
-<body>
+<body id="inicio">
     <nav>
         <ul>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li class="dropdown">
+            <a href="#proyectos">Proyectos</a>
+            <ul class="dropdown-menu">
+                <li><a href="#proyecto1">Gestión Carnicería</a></li>
+                <li><a href="#proyecto2">Módulo Asistencia</a></li>
+                <li><a href="#proyecto3">E-Commerce</a></li>
+                <li><a href="#proyecto4">Juego Indie Web</a></li>
+            </ul>
+        </li>
+        <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
     <h1>Portafolio de Facundo Garnica</h1>
-    <p> Bienvenidos, soy Facundo Garnica, analista programador con foco en el análisis de datos y el desarrollo de software. Trabajo con Java y PHP, utilizando frameworks modernos como Symfony, Spring Boot y Angular para crear soluciones eficientes, escalables y orientadas a resultados.</p>
-    <button> Mis proyectos</button>
-
+    <p class="intro"> Bienvenidos, soy Facundo Garnica, analista programador con foco en el análisis de datos y el
+        desarrollo de software. Trabajo con Java y PHP, utilizando frameworks modernos como Symfony, Spring Boot y Angular
+        para crear soluciones eficientes, escalables y orientadas a resultados.</p>
+    <div class="seccion-botones" id="proyectos">
+        <h2 class="titulo-proyectos">Mis Proyectos</h2>
+        <div class="contenedor-botones">
+            <a href="#proyecto1" class="btn-proyecto">Gestión Carnicería</a>
+            <a href="#proyecto2" class="btn-proyecto">Módulo Asistencia</a>
+            <a href="#proyecto3" class="btn-proyecto">E-Commerce</a>
+            <a href="#proyecto4" class="btn-proyecto">Juego Indie Web</a>
+        </div>
+    </div>
     <!--Perfil Mio-->
     <div class="contacto" id="contacto">
-        <h2>Contacto</h2>
-        <p>Nombre completo: Facundo Garnica</p>
-        <p>Telefono: (+54) 2216272337</p>
-        <p>Ubicacion: Buenos Aires, La Plata</p>
-        <p>Email: facundogarnica1996@gmail.com</p>
-        <p>LinkedIn: <a href="www.linkedin.com/in/facundo-garnica-643311311" target="_blank">Perfil de LinkedIn</a></p>
-        <p>GitHub: </p>
-
+    <h2>Contacto</h2>
+    <p><strong>Nombre completo:</strong> Facundo Garnica</p>
+    <p><strong>Teléfono:</strong> <a href="tel:+542216272337">(+54) 221 627 2337</a></p>
+    <p><strong>Ubicación:</strong> Buenos Aires, La Plata</p>
+    <p><strong>Email:</strong> <a href="mailto:facundogarnica1996@gmail.com">facundogarnica1996@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/facundo-garnica-643311311" target="_blank"
+            rel="noopener noreferrer">Perfil de LinkedIn</a></p>
+    <p><strong>GitHub:</strong> <a href="#" target="_blank" rel="noopener noreferrer">🔗 Perfil de GitHub</a></p>
     </div>
 
     <!-- Proyecto 1-->
-    <div class="proyectos">
+    <div class="proyectos" id="proyecto1">
         <h2>Sistema de gestión de carnicería</h2>
         <p>Sistema para uso comercial, incluye módulos tales como:</p>
         <ul>
@@ -59,40 +76,38 @@
         </ul>
         <p>
             Proyecto en github:
-            <a href="https://github.com/tuusuario/carniceria" target="_blank">🔗 Ver repositorio en GitHub</a>
+            <a href="https://github.com/facundoGarnica/SistemaCarne.git" target="_blank">🔗 Ver repositorio en GitHub</a>
         </p>
     </div>
 
     <!-- Proyecto 2-->
-    <div class="proyectos">
+    <div class="proyectos" id="proyecto2">
         <h2>Desarrollo módulo Sugist</h2>
         <p>Desarrollo de un módulo de asistencias que incluye:</p>
         <ul>
             <li>Vista de docentes y alumnos:</li>
             <p>Muestra los docentes asignados y los estudiantes a su cargo.</p>
-            <img class="imagenes" src="assets/carniceria-productos.png" alt="Vistas docentes">
+            <img class="imagenes" src="assets/sugist_vista__inicial.png" alt="Vistas docentes">
 
             <li>Control de asistencias:</li>
             <p>Registro detallado de las clases dictadas y los presentes en cada una.</p>
-            <img class="imagenes" src="assets/carniceria-productos.png" alt="Módulo de asistencia">
+            <img class="imagenes" src="assets/sugist_vista_por_dia.png" alt="Módulo de asistencia">
 
             <li>Reportes de porcentajes:</li>
             <p>Generación de estadísticas de asistencia a lo largo de la carrera.</p>
-            <img class="imagenes" src="assets/carniceria-productos.png" alt="vista porcentaje">
+            <img class="imagenes" src="assets/sugist_vista_porcentaje.png" alt="vista porcentaje">
 
-            <li>Modo administrador:</li>
-            <p>Los usuarios con rol administrador pueden modificar y gestionar registros de asistencia.</p>
-            <img class="imagenes" src="assets/carniceria-productos.png" alt="Modo administrador">
         </ul>
-        <p>
+    <!-- <p>
             Proyecto en github:
             <a href="https://github.com/tuusuario/sugist" target="_blank">🔗 Ver repositorio en GitHub</a>
-        </p>
+        </p>-->
     </div>
 
     <!-- Proyecto 3-->
-    <div class="proyectos">
+    <div class="proyectos" id="proyecto3">
         <h2>Proyecto E-Commerce: Mercado-Mago</h2>
+        <p>(En proceso de desarrollo)</p>
         <img src="assets/Mercado-Mago.png" alt="Proyecto Mercado Mago">
         <p>Desarrollo de plataforma marketplace con arquitectura RESTful, orientada a la compra y venta de productos.</p>
         <ul>
@@ -111,8 +126,64 @@
             <li>Metodologías ágiles y full stack:</li>
             <p>Aplicación de prácticas reales de trabajo en equipo y desarrollo ágil, integrando frontend y backend.</p>
         </ul>
-        <p>
-            <a href="https://github.com/tuusuario/mercado-mago" target="_blank">🔗 Ver repositorio en GitHub</a>
+        <!--<p>
+                            <a href="https://github.com/tuusuario/mercado-mago" target="_blank">🔗 Ver repositorio en GitHub</a>
+                        </p> -->
+        </div>
+        
+        <!-- Proyecto 4 -->
+        <div class="proyectos" id="proyecto4">
+            <h2>🎮 CodeGames - Plataforma Multi-Juego Indie</h2>
+        
+            <p>
+                Plataforma en desarrollo que permite a desarrolladores y jugadores acceder a múltiples videojuegos indie desde
+                una única cuenta.
+                Actualmente, el único juego disponible es <strong>"ArrayRun"</strong>.
+            </p>
+        
+            <ul>
+                <li>
+                    <strong>Gestión de usuarios unificada:</strong>
+                    <p>
+                        Registro y autenticación centralizada para todos los juegos.
+                        Un solo inicio de sesión permite acceder a múltiples títulos y guardar el progreso.
+                    </p>
+                    <div class="galeria">
+                        <img class="imagenes" src="assets/codegames_sesion.png" alt="Pantalla de inicio de sesión CodeGames">
+                        <img class="imagenes" src="assets/codegames_bienvenido.png" alt="Pantalla de bienvenida CodeGames">
+                    </div>
+                </li>
+        
+                <li>
+                    <strong>Soporte multi-juego y sistema de puntuación:</strong>
+                    <p>
+                        Permite incorporar nuevos juegos sin reestructurar la base de datos ni el backend.
+                        Cada juego mantiene su propia lógica, niveles y puntajes.
+                        Se incluye un ranking con los <em>cuatro mejores scores</em> de los jugadores.
+                    </p>
+                    <img class="imagenes" src="assets/codegames_top_score.png" alt="Top scores de jugadores en CodeGames">
+                </li>
+        
+                <li>
+                    <strong>Selección de niveles y visualización de puntajes:</strong>
+                <p>
+                    Interfaz intuitiva que permite seleccionar niveles y visualizar el puntaje obtenido en cada uno.
+                    </p>
+                    <img class="imagenes" src="assets/codegames_niveles.png" alt="Pantalla de niveles y puntajes en CodeGames">
+                    </li>
+                    </ul>
+                    
+                    <p class="repo">
+                        🔗 Proyecto en GitHub:
+                        <a href="https://github.com/facundoGarnica/juegoWeb.git" target="_blank">
+                            Ver repositorio
+                        </a>
+                    </p>
+                    <p class="repo">
+                        🔗 Pagina web (subida en infinity free):
+                        <a href="https://codegames.great-site.net" target="_blank">
+                            ir a la pagina
+                        </a>
         </p>
     </div>
 

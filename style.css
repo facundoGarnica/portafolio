@@ -63,6 +63,60 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #323232;
+    list-style: none;
+    padding: 0;
+    min-width: 180px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0.5rem;
+}
+
+.dropdown-menu li {
+    padding: 0;
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 0.4rem 1.2rem;
+    color: #DDD0C8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #1a1a1a;
+    padding-left: 1.5rem;
+}
+
+.dropdown-menu li a::after {
+    display: none;
+}
 /* Header principal */
 h1 {
     text-align: center;
@@ -73,7 +127,7 @@ h1 {
     animation: fadeInDown 1s ease;
 }
 
-body > p {
+.intro {
     text-align: center;
     color: #323232;
     font-size: 1.2rem;
@@ -83,24 +137,40 @@ body > p {
     animation: fadeIn 1.5s ease;
 }
 
-/* Botón principal */
-body > button {
-    display: block;
-    margin: 2rem auto 4rem;
-    padding: 1rem 3rem;
-    font-size: 1.2rem;
+/* Sección botones proyectos */
+.seccion-botones {
+    text-align: center;
+    margin: 3rem auto;
+    max-width: 1000px;
+}
+
+.titulo-proyectos {
+    color: #323232;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    animation: fadeInDown 1s ease;
+}
+
+.contenedor-botones {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-proyecto {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: #DDD0C8;
     background-color: #323232;
-    border: none;
     border-radius: 8px;
-    cursor: pointer;
+    text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    animation: fadeInUp 2s ease;
 }
 
-body > button:hover {
+.btn-proyecto:hover {
     transform: translateY(-3px);
     background-color: #1a1a1a;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
@@ -162,7 +232,38 @@ body > button:hover {
     padding-left: 1rem;
 }
 
-/* Clase para todas las imágenes */
+.proyectos > p {
+    font-size: 1.1rem;
+    color: #323232;
+    margin: 1.5rem 0;
+}
+
+.proyectos ul {
+    list-style: none;
+    margin-left: 0;
+    margin-top: 2rem;
+}
+
+.proyectos ul li {
+    color: #323232;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #DDD0C8;
+}
+
+.proyectos ul li p {
+    color: #323232;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Imágenes */
 .imagenes {
     width: 100%;
     max-width: 600px;
@@ -178,41 +279,6 @@ body > button:hover {
 .imagenes:hover {
     transform: scale(1.02);
 }
-
-.proyectos > p {
-    font-size: 1.1rem;
-    color: #323232;
-    margin: 1.5rem 0;
-}
-
-/* Lista de características */
-.proyectos ul {
-    list-style: none;
-    margin-left: 0;
-    margin-top: 2rem;
-}
-
-/* Cada item de la lista con su imagen */
-.proyectos ul li {
-    color: #323232;
-    font-weight: 600;
-    font-size: 1.2rem;
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #DDD0C8;
-}
-
-/* Descripción debajo del título de cada característica */
-.proyectos ul li p {
-    color: #323232;
-    font-weight: 400;
-    font-size: 1rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
-}
-
 /* Footer */
 footer {
     background-color: #323232;
@@ -262,7 +328,7 @@ footer {
         margin-top: 100px;
     }
 
-    body > p {
+        .intro {
         font-size: 1rem;
     }
 
@@ -283,8 +349,13 @@ footer {
         font-size: 1.8rem;
     }
 
-    body > button {
-        padding: 0.8rem 2rem;
-        font-size: 1rem;
+        .contenedor-botones {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .btn-proyecto {
+            width: 80%;
+            max-width: 300px;
     }
 }
