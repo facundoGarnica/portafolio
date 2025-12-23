@@ -16,7 +16,7 @@
             <ul class="dropdown-menu">
                 <li><a href="#proyecto1">Gestión Carnicería</a></li>
                 <li><a href="#proyecto2">Módulo Asistencia</a></li>
-                <li><a href="#proyecto3">E-Commerce</a></li>
+                <li><a href="#proyecto3">E-Commerce Mercado Mago</a></li>
                 <li><a href="#proyecto4">Juego Indie Web</a></li>
             </ul>
         </li>
@@ -108,26 +108,46 @@
     <!-- Proyecto 3-->
     <div class="proyectos" id="proyecto3">
         <h2>Proyecto E-Commerce: Mercado-Mago</h2>
-        <p>(En proceso de desarrollo)</p>
-        <img src="assets/Mercado-Mago.png" alt="Proyecto Mercado Mago">
-        <p>Desarrollo de plataforma marketplace con arquitectura RESTful, orientada a la compra y venta de productos.</p>
+        <p>Plataforma marketplace con arquitectura RESTful, orientada a la compra y venta de productos mágicos. Sistema
+            desarrollado con Angular y Spring Boot aplicando metodologías ágiles.</p>
+        <img class="imagenes" src="assets/Mercado-Mago.png" alt="Proyecto Mercado Mago">
+        <p>La plataforma incluye los siguientes módulos y funcionalidades:</p>
         <ul>
             <li>Autenticación y autorización de usuarios:</li>
-            <p>Implementación de registro, login seguro y control de accesos según roles.</p>
-
-            <li>Gestión de productos, publicaciones y carrito de compras:</li>
-            <p>Administración completa de productos, posibilidad de publicar ofertas y sistema de carrito dinámico.</p>
-
-            <li>Desarrollo en Angular:</li>
-            <p>Creación de componentes reutilizables para mejorar la escalabilidad y mantenibilidad del proyecto.</p>
-
+            <p>Sistema de registro e inicio de sesión seguro con validación de credenciales y control de accesos según roles de
+                usuario.</p>
+            <img class="imagenes" src="assets/mercadomago_login.png" alt="Inicio de sesión">
+            <li>Catálogo de productos:</li>
+            <p>Tienda con filtros por categorías (Todos, Armas, Pociones, Armaduras, Accesorios, Pergaminos), sistema de búsqueda
+                avanzado y visualización de ofertas destacadas con descuentos de hasta 40%.</p>
+            <img class="imagenes" src="assets/mercadomago_catalogo.png" alt="Catálogo de productos">
+            <li>Gestión administrativa de productos:</li>
+            <p>Panel completo para administrar inventario con opciones de crear, editar y eliminar productos. Incluye visualización
+                de ID, nombre, descripción, precio, descuento, rareza, stock y estado.</p>
+            <img class="imagenes" src="assets/mercadomago_gestion.png" alt="Gestión de productos">
+            <li>Publicación de productos:</li>
+            <p>Formulario detallado para agregar nuevos productos con campos para nombre, descripción, categoría, rareza, precio,
+                descuento, estado, stock e imagen del producto.</p>
+            <img class="imagenes" src="assets/mercadomago_cargar.png" alt="Cargar producto">
+            <li>Sistema de carrito de compras:</li>
+            <p>Carrito dinámico con selección de cantidad, cálculo automático de descuentos y subtotales. Incluye gestión de
+                dirección de entrega, selección de método de envío y visualización detallada de costos.</p>
+            <img class="imagenes" src="assets/mercadomago_checkout.png" alt="Proceso de compra">
+            <li>Vista detallada de productos:</li>
+            <p>Modal interactivo con información completa del producto incluyendo imagen, precio unitario con descuento aplicado,
+                selector de cantidad y botón de confirmación de compra con cálculo de total en tiempo real.</p>
+            <img class="imagenes" src="assets/mercadomago_producto.png" alt="Detalle de producto">
+            <li>Desarrollo frontend con Angular:</li>
+            <p>Creación de componentes reutilizables y modulares para mejorar la escalabilidad y mantenibilidad del proyecto.
+                Implementación de servicios para consumo de APIs RESTful.</p>
             <li>Backend con Spring Boot:</li>
-            <p>Optimización de consultas y endpoints RESTful para garantizar un alto rendimiento.</p>
-
-            <li>Metodologías ágiles y full stack:</li>
-            <p>Aplicación de prácticas reales de trabajo en equipo y desarrollo ágil, integrando frontend y backend.</p>
+            <p>Arquitectura RESTful con endpoints optimizados, gestión de base de datos relacional y validaciones de negocio para
+                garantizar alto rendimiento y seguridad.</p>
+            <li>Metodologías ágiles y trabajo full stack:</li>
+            <p>Aplicación de prácticas de desarrollo ágil, versionamiento con Git, integración continua y trabajo colaborativo
+                integrando frontend y backend.</p>
         </ul>
-        </div>
+    </div>
         
         <!-- Proyecto 4 -->
         <div class="proyectos" id="proyecto4">
@@ -179,6 +199,14 @@
                     </p>
 </p>
     </div>
+
+    <!-- Modal para imágenes -->
+    <div id="modalImagen" class="modal-imagen">
+        <span class="cerrar-modal">&times;</span>
+        <img class="modal-contenido" id="imagenModal">
+    </div>
+    
+    <script src="script.js"></script>
 
     <footer>
         <p>&copy; 2025 Facundo Garnica. Todos los derechos reservados.</p>
